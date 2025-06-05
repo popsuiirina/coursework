@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Нельзя поверить в&nbspневозможное - Книжный магазин</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-block">
+      <a href="../index.html">
+        <img src="../images/logo.png" alt="Логотип"/>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="../index.html" class="nav-link">Главная</a></li>
+        <li><a href="../pages/about.html" class="nav-link">О проекте</a></li>
+        <li><a href="../pages/catalog.html" class="nav-link">Каталог</a></li>
+        <li><a href="../index.html#faq" class="nav-link scroll-to-faq">Вопросы</a></li>
+        <li><a href="#footer" class="nav-link scroll-to-footer">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="book-details">
+      <div class="book-main-info">
+        <div class="book-cover">
+          <img src="../images/cover_book_12.png" alt="Обложка книги">
+        </div>
+        <div class="book-info">
+          <h1>Нельзя поверить в&nbspневозможное</h1>
+          <p class="author">Автор: <span>Льюис Кэрролл</span></p>
+          <p class="designer">Художник: <span>Беатриса Оленева</span></p>
+          <p class="price">Цена: <span>3000 ₽</span></p>
+          <button class="buy-button">Хочу купить!</button>
+        </div>
+      </div>
+
+      <div class="book-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="../images/book_12_1.png" alt="Страница 1" class="carousel-image">
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/book_12_2.png" alt="Страница 2" class="carousel-image">
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/book_12_3.png" alt="Страница 3" class="carousel-image">
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/book_12_4.png" alt="Страница 4" class="carousel-image">
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/book_12_5.png" alt="Страница 5" class="carousel-image">
+            </div>
+          </div>
+          <button class="carousel-button prev">&#10094;</button>
+          <button class="carousel-button next">&#10095;</button>
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-content-wrapper">
+        <div class="book-content">
+          <div class="book-tabs-container">
+            <div class="tabs">
+              <button class="tab-button active" data-tab="annotation">
+                <h4>Аннотация</h4>
+              </button>
+              <button class="tab-button" data-tab="description">
+                <h4>О книге</h4>
+              </button>
+            </div>
+            
+            <div class="tab-content">
+              <div class="tab-pane active" id="annotation">
+              <p>Льюис Кэрролл (1832–1898) — английский философ и математик, ставший знаменитым писателем. Литературное признание и мировую известность ему принесли две сказки о приключениях девочки Алисы в Стране чудес и в Зазеркалье. В книге представлены как стихотворения из Алисы так и самостоятельные лирические произведения.</p>   
+              </div>
+              <div class="tab-pane" id="description">
+                <p>64 страницы с чёрно-белыми иллюстрациями в технике штриховки гелевой ручкой.</p>
+                <p>Особенности издания:</p>
+                <ul>
+                  <li>Уникальность каждого экземпляра</li>
+                  <li>Ручная работа</li>
+                  <li>Личный почерк художника</li>
+                  <li>Авторские иллюстрации и вёрстка</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-quotes">
+            <h2>Цитаты</h2>
+            <div class="quote">
+              <blockquote>
+                «Вы — далеко не юная —<br>
+                Позавчера за ужином<br>
+                От гуся не оставили<br>
+                Ни лап, ни головы!»
+              </blockquote>
+              <cite>— Льюис Кэрролл</cite>
+            </div>
+          </div>
+        </div>
+
+        <aside class="book-sidebar">
+          <div class="sidebar-section">
+            <h4>Похожие книги</h4>
+            <div class="similar-book">
+              <a href="../pages_book/book4.html"><img src="../images/cover_book_4.png" alt="Обложка книги" class="similar-book-cover"></a>
+              <div class="similar-book-info">
+                <h4 class="similar-book-title">Азбука механических насекомых</h4>
+                <p class="similar-book-price">3000 ₽</p>
+              </div>
+            </div>
+            <div class="similar-book">
+              <a href="../pages_book/book7.html"><img src="../images/cover_book_7.png" alt="Обложка книги" class="similar-book-cover"></a>
+              <div class="similar-book-info">
+                <h4 class="similar-book-title">Наедине с грибами</h4>
+                <p class="similar-book-price">3000 ₽</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модальное окно оформления заказа -->
+  <div class="order-modal" id="orderModal">
+    <div class="order-modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Оформление заказа</h2>
+      <p class="order-description">Оставьте ваши контактные данные, и наш менеджер свяжется с вами для оформления заказа.</p>
+      <form class="order-form" id="orderForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9+\s-()]+" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <button type="submit" class="submit-order">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Контакты</h3>
+        <p class="contact-item">📞 +7 (812) 123-45-67</p>
+        <p class="contact-item">📧 info@bookstore.ru</p>
+        <p class="contact-item">📍 пер. Джамбула, 13,<br>Санкт-Петербург</p>
+      </div>
+      <div class="footer-section">
+        <h3>Время работы</h3>
+        <p>Пн-Сб: 8:00 – 22:00</p>
+        <p>Вс: выходной</p>
+      </div>
+      <div class="footer-section">
+        <h3>Информация</h3>
+        <p><a href="../pages/about.html">О проекте</a></p>
+        <p><a href="../index.html#faq" class="scroll-to-faq">Вопросы</a></p>
+        <p><a href="../pages/privacy-policy.html">Политика конфиденциальности</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Мы в соцсетях</h3>
+        <div class="social-links">
+          <a href="https://hspm.ru/podrazdeleniya/institut-mediatehnologiy/kafedra-grafiki?ysclid=mbieys7jlb986361579" class="social-icon" target="_blank">
+            <img src="../images/vshpm.png" alt="ВШПМ" width="32" height="32">
+          </a>
+          <a href="https://vk.com/club40140109?ysclid=mbiez2jp5n619493413&t2fs=fe80ec826a963d08bf_3" class="social-icon" target="_blank">
+            <img src="../images/vk.png" alt="VK" width="32" height="32">
+          </a>
+          <a href="https://t.me/spsutd" class="social-icon" target="_blank">
+            <img src="../images/tg.png" alt="Telegram" width="32" height="32">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Книжный магазин. Все права защищены.
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html> 
