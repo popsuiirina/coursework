@@ -133,7 +133,7 @@ document.addEventListener('keydown', (e) => {
     2: {
       title: "Люди",
       author: "Автор неизвестен",
-      designer: "Дарья Николаева",
+      designer: "Дарья Неёлова",
       description: "Уникальное издание, исследующее природу человеческих отношений через призму современного искусства и философии.",
       price: "3000 ₽",
       image: "images/cover_book_2.png"
