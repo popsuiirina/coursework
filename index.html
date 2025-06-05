@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Книжный-магазин</title>
+
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <header>
+    <div class="logo-block">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Логотип"/>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Главная</a></li>
+        <li><a href="pages/about.html" class="nav-link">О проекте</a></li>
+        <li><a href="pages/catalog.html" class="nav-link">Каталог</a></li>
+        <li><a href="#faq" class="nav-link scroll-to-faq">Вопросы</a></li>
+        <li><a href="#footer" class="nav-link scroll-to-footer">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-preview">
+      <div class="about-preview-container">
+        <h2>О нашем проекте</h2>
+        <p>
+          Мы создаём пространство для авторских книжных проектов, в&nbspкоторых соединяются литература и современное визуальное&nbspмышление. 
+        </p>
+        <a href="pages/about.html" class="button">Подробнее</a>
+      </div>
+    </section>
+
+    <section class="bookshelf-section">
+      <h1>Наша цветная полка</h1>
+      <div class="bookshelf">
+        <div class="book-preview" data-book="1">
+          <img src="images/cover_book_1.png" alt="Военная лирика">
+        </div>
+        <div class="book-preview" data-book="11">
+          <img src="images/cover_book_11.png" alt="Стихотворения Гёте">
+        </div>
+        <div class="book-preview" data-book="3">
+          <img src="images/cover_book_3.jpg" alt="Холмы">
+        </div>
+        <div class="book-preview" data-book="10">
+          <img src="images/cover_book_10.png" alt="Трус не играет в хоккей">
+        </div>
+        <div class="book-preview" data-book="9">
+          <img src="images/cover_book_9.png" alt="Сеанс">
+        </div>
+      </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="bookModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-book-content">
+          <div class="modal-book-cover">
+            <img src="" alt="Обложка книги">
+          </div>
+          <div class="modal-book-info">
+            <h2 class="modal-book-title"></h2>
+            <p class="modal-book-author"></p>
+            <p class="modal-book-designer"></p>
+            <p class="modal-book-description"></p>
+            <p class="modal-book-price"></p>
+            <button class="buy-button">Хочу купить!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="section-title">Книга месяца</h1>
+    <section class="book-of-month">
+      <div class="book-container">
+        <div class="book-image">
+          <img src="images/cover_book_13.png" alt="Книга месяца" />
+        </div>
+        <div class="book-info">
+          <h2>Сборник стихотворений Поля Элюара</h2>
+          <p class="author">Автор: Поль Элюар</p>
+          <p class="designer">Художник: Алина Коренева</p>
+          <p class="description">Поль Элюар оказал значительное влияние на литературу XX века. 
+            Сначала он был связан с сюрреализмом и использовал образы и&nbspметафоры, характерные для этого направления, в своих ранних сборниках. 
+            Однако со временем Элюар начал отходить от чисто сюрреалистических идей, придавая своим стихам личную и&nbspэмоциональную окраску. 
+            Его способность превращать простые чувства в&nbspбогатые поэтические образы, а также противоречие между экспериментом и&nbspреальностью стали важными составляющими его&nbspтворчества. 
+            Работы Поля Элюара повлияли на&nbspразвитие французской поэзии и&nbspкультурный контекст времени.</p>
+          <p class="price">3000 ₽</p>
+          <a href="pages_book/book13.html" class="want-button">Хочу купить!</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bookshelf-section">
+      <h1>Наша чёрно-белая полка</h1>
+      <div class="bookshelf">
+        <div class="book-preview" data-book="6">
+          <img src="images/cover_book_6.png" alt="Здравомысленный заяц">
+        </div>
+        <div class="book-preview" data-book="2">
+          <img src="images/cover_book_2.png" alt="Люди">
+        </div>
+        <div class="book-preview" data-book="8">
+          <img src="images/cover_book_8.png" alt="Ветви слив в цвету">
+        </div>
+        <div class="book-preview" data-book="7">
+          <img src="images/cover_book_7.png" alt="Наедине с грибами">
+        </div>
+        <div class="book-preview" data-book="5">
+          <img src="images/cover_book_5.png" alt="Азбука эмоций">
+        </div>
+      </div>
+    </section>
+
+    <!-- Модальное окно оформления заказа -->
+    <div class="order-modal" id="orderModal">
+      <div class="order-modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Оформление заказа</h2>
+        <p class="order-description">Оставьте ваши контактные данные, и наш менеджер свяжется с вами для оформления заказа.</p>
+        <form class="order-form" id="orderForm">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9+\s-()]+" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <button type="submit" class="submit-order">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <h2>Популярные вопросы</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Как оформить заказ?
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>Чтобы оформить заказ, выберите понравившуюся книгу и нажмите кнопку «Хочу купить!». Затем заполните форму с контактными данными, и наш менеджер свяжется с вами для подтверждения.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Какие способы оплаты доступны?
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>Мы принимаем оплату банковскими картами (Visa, MasterCard, МИР), через электронные кошельки (ЮMoney, QIWI) и наличными при получении заказа. При оплате онлайн комиссия не взимается.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Как осуществляется доставка?
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>Доставка осуществляется по всей России. В Санкт-Петербурге доступна курьерская доставка и самовывоз из нашего магазина. В другие города отправляем Почтой России или СДЭК. Сроки доставки зависят от региона и выбранного способа доставки.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Можно ли вернуть или обменять книгу?
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>Да, вы можете вернуть книгу в течение 14 дней с момента получения, если она не имеет следов использования и сохранены все элементы упаковки. Обмен производится только в случае брака.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-container">
+        <h2>Подпишитесь на нашу рассылку</h2>
+        <p class="newsletter-description">Получайте информацию о новинках, скидках и эксклюзивных предложениях</p>
+        <form class="subscribe-form">
+          <div class="input-group">
+            <input type="email" placeholder="Введите ваш email" required>
+            <button type="submit" class="subscribe-button">Подписаться</button>
+          </div>
+          <div class="consent-group">
+            <input type="checkbox" id="consent" required>
+            <label for="consent">Я согласен на обработку персональных данных и получение рассылки</label>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Контакты</h3>
+        <p class="contact-item">📞 +7 (812) 123-45-67</p>
+        <p class="contact-item">📧 info@bookstore.ru</p>
+        <p class="contact-item">📍 пер. Джамбула, 13,<br>Санкт-Петербург</p>
+      </div>
+      <div class="footer-section">
+        <h3>Время работы</h3>
+        <p>Пн-Сб: 8:00 – 22:00</p>
+        <p>Вс: выходной</p>
+      </div>
+      <div class="footer-section">
+        <h3>Информация</h3>
+        <p><a href="pages/about.html">О проекте</a></p>
+        <p><a href="#faq" class="scroll-to-faq">Вопросы</a></p>
+        <p><a href="pages/privacy-policy.html">Политика конфиденциальности</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Мы в соцсетях</h3>
+        <div class="social-links">
+          <a href="https://hspm.ru/podrazdeleniya/institut-mediatehnologiy/kafedra-grafiki?ysclid=mbieys7jlb986361579" class="social-icon" target="_blank">
+            <img src="images/vshpm.png" alt="ВШПМ" width="32" height="32">
+          </a>
+          <a href="https://vk.com/club40140109?ysclid=mbiez2jp5n619493413&t2fs=fe80ec826a963d08bf_3" class="social-icon" target="_blank">
+            <img src="images/vk.png" alt="VK" width="32" height="32">
+          </a>
+          <a href="https://t.me/spsutd" class="social-icon" target="_blank">
+            <img src="images/tg.png" alt="Telegram" width="32" height="32">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Книжный магазин. Все права защищены.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
